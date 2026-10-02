@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: colombian-payments-backend
+
+server:
+  port: 8080
+
+payments:
+  # Demo value, the real UVT for 2026 is set by the DIAN every year.
+  uvt-cop: 52374
+  jwt:
+    # HS256 needs at least 256 bits, so keep the secret long.
+    secret: colombian-payments-demo-signing-secret-change-me-0123456789abcdef
+    ttl-hours: 24
+  cors:
+    allowed-origins: http://localhost:5173
