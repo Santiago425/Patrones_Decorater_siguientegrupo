@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  /* Ink blue: primary structure, headers, base layer. */
+  --color-ink-950: #061626;
+  --color-ink-900: #0b2545;
+  --color-ink-800: #12315a;
+  --color-ink-700: #1b4372;
+  --color-ink-300: #a9c1dc;
+  --color-ink-200: #c9d9ec;
+  --color-ink-100: #e2ebf5;
+  --color-ink-50: #f2f6fb;
+
+  /* Accent green: credits, merchant-side confirmations. */
+  --color-accent-700: #0a7350;
+  --color-accent-600: #0e8a60;
+  --color-accent-500: #13a06f;
+  --color-accent-200: #b7e6d1;
+  --color-accent-100: #e2f6ed;
+
+  /* Warning amber: charges the payer, validation attention. */
+  --color-warn-700: #92400e;
+  --color-warn-600: #b45309;
+  --color-warn-500: #d97706;
+  --color-warn-200: #f6dfb6;
+  --color-warn-100: #fdf3e3;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-900 font-sans antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent-600;
+  }
+}
